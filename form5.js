@@ -1,8 +1,9 @@
+
 /*=====================================
   ex
 =====================================*/
 function test(){
-  let item ={
+  let item = {
     width: '3',
     label: '姓名',
     type: "text",
@@ -11,8 +12,42 @@ function test(){
     valid: "required",
     option: "單選1|單選2|單選3",
   };
-  let form_item = [{},{},{}]
+  for(let i in item){
+    console.log(i + ': ',item[i]);
+  }
 
-  console.log(item.width, item['label']);
+  let form_item = [
+    {
+      width: '3',
+      label: '姓名',
+      type: "text",
+      name: "name",
+      value: "",
+      valid: "required",
+      option: "",
+  },
+  {
+      width: '3',
+      label: '網址',
+      type: "url",
+      name: "url",
+      value: "",
+      valid: "required",
+      option: "",
+  },
+  {
+      width: '3',
+      label: 'EMAIL',
+      type: "email",
+      name: "email",
+      value: "",
+      valid: "",
+      option: "",
+  }]
+
+
+  // console.log(item.width, item['label']);
+  // console.log(form_item[0].label);
+  // console.log(form_item[0]['label']);
 
 }
